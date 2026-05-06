@@ -26,7 +26,6 @@ public class Insertion {
                 int valB = array[b];
                 boolean cambio = false;
 
-                // Condición para ascendente o descendente
                 if (asc == true) {
                     if (valA > valB) {
                         array[a] = valB;
@@ -67,7 +66,6 @@ public class Insertion {
         System.out.println("ITERACIONES   = " + iteraciones);
         System.out.println("CAMBIOS       = " + cambios + "\n");
 
-        // Retorna: cantidad de comparaciones, cantidad de cambios, cantidad de iteraciones
         return new int[]{comparaciones, cambios, iteraciones};
     }
 

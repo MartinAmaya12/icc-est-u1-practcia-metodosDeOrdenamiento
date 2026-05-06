@@ -9,7 +9,10 @@ public class Shell {
         imprimirArreglo(array);
         System.out.println("\n");
 
-        for (int gap = array.length / 2; gap > 0; gap /= 2) {
+        int gap = array.length / 2;
+
+        while (gap > 0) {
+            
             for (int i = gap; i < array.length; i++) {
                 iteraciones++;
                 int j = i;
@@ -27,7 +30,6 @@ public class Shell {
                     int valB = array[b];
                     boolean cambio = false;
 
-                    // Condición para ascendente o descendente
                     if (asc == true) {
                         if (valA > valB) {
                             array[a] = valB;
@@ -56,10 +58,13 @@ public class Shell {
                     if (!cambio) {
                         break;
                     }
-                    j -= gap;
+                    j = j - gap; // Resta explícita para que se vea más claro
                 }
                 System.out.println();
             }
+            
+            // 3. Dividimos el gap explícitamente al final de cada vuelta completa
+            gap = gap / 2; 
         }
 
         System.out.print("end\t");

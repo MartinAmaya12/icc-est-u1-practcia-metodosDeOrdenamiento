@@ -58,12 +58,11 @@ public class Shell {
                     if (!cambio) {
                         break;
                     }
-                    j = j - gap; // Resta explícita para que se vea más claro
+                    j = j - gap;
                 }
                 System.out.println();
             }
             
-            // 3. Dividimos el gap explícitamente al final de cada vuelta completa
             gap = gap / 2; 
         }
 
